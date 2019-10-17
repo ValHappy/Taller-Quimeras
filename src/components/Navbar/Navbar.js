@@ -19,7 +19,7 @@ function Navbar(props) {
                 <img src="url('https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg')" alt="aiuda" />
             </div>
 
-            <Tabs value={props.location.pathname} onChange={handleChange} indicatorColor="secondary" textColor="primary" licentered>
+            <Tabs className={classes.navbar} value={props.location.pathname} onChange={handleChange} indicatorColor="secondary" textColor="primary" licentered>
                 <Tab label="Home" value="/" />
                 <Tab label="Create a Chimera" value="/create" />
                 <Tab label="My Chimeras" value="/garage" />
@@ -35,6 +35,10 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    navbar: {
+        fontWeight: 'bolder',
+        color: 'white'
     },
     logo: {
         padding: 0.5,

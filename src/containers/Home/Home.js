@@ -20,7 +20,7 @@ function Home(props) {
 const useStyles = makeStyles(theme => ({
     container: {
         width: '40%',
-        marginTop: '8%',
+        height: 400,
         padding: 100,
         display: 'flex',
         flexDirection: 'column',
@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         margin: 0,
+        marginTop: 100,
         padding: 15,
         color: theme.palette.primary.main,
         fontSize: 40,
