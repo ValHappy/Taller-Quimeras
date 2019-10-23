@@ -1,12 +1,13 @@
 body{
+    font-family: 'Roboto Condensed', sans-serif;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0; 
-    background-image: url("https://images6.alphacoders.com/805/805656.jpg");
-    /* background-image: url(./img/background.png); */
+    background-image: url(./img/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 

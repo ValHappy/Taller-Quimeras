@@ -1,12 +1,22 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Button } from '@material-ui/core';
+import Chimera from '../../components/Chimera/Chimera';
+import Categories from '../../components/Categories/Categories';
+import Selection from '../../components/Selection/Selection'
 
 function Create() {
     const classes = useStyles();
 
+    function handleClick() {
+
+    }
+
     return (
         <div className={classes.container}>
-            <h1 className={classes.title}>Create a chimera</h1>
+            <Chimera />
+            <Categories />
+            <Selection />
+            <Button onClick={handleClick} variant="contained" className={classes.button}> done </Button>
         </div>
     );
 }
@@ -14,15 +24,22 @@ function Create() {
 const useStyles = makeStyles(theme => ({
     container: {
         width: '100%',
-        height: 600,
+        height: 655,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
-    title: {
-        color: 'white'
-    }
+    button: {
+        width: '8%',
+        margin: 5,
+        padding: 5,
+        color: 'white',
+        background: '#4d888f',
+        '&:hover': {
+            background: '#355f64',
+        }
+    },
 }));
 
 export default Create;

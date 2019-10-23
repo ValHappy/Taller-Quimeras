@@ -60,6 +60,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
+        alignContent: 'center',
         flexWrap: 'wrap',
     },
     element: {

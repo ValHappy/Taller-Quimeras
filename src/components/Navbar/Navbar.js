@@ -4,8 +4,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { withRouter } from 'react-router-dom';
 
-import { createMuiTheme } from '@material-ui/core/styles';
-
 function Navbar(props) {
     const classes = useStyles();
 
@@ -45,22 +43,5 @@ const useStyles = makeStyles(theme => ({
         marginRight: '60%',
     }
 }));
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            light: '#709fa5',
-            main: '#4d888f',
-            dark: '#355f64',
-            contrastText: '#fff',
-        },
-        secondary: {
-            light: '#bcfaad',
-            main: '#acf999',
-            dark: '#78ae6b',
-            contrastText: '#fff',
-        },
-    },
-  });
 
 export default withRouter(Navbar);
