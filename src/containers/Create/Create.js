@@ -8,7 +8,6 @@ function Create() {
     const classes = useStyles();
 
     function handleClick() {
-
     }
 
     return (
