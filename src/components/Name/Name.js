@@ -11,7 +11,7 @@ function Name(props) {
 
     const handleClick = (event) => {
         if (!context.name.length) {
-            alert("Give a name for your pet >:c");
+            alert("¡Dale un nombre a tu mascotica! >:c");
         } else {
             let chimeras = [...context.chimeras];
             chimeras.push(
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
         margin: 5,
         padding: 5,
         color: 'white',
-        background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
+        background: 'linear-gradient(45deg, #4d888f 40%, #59ef66 90%)',
         '&:hover': {
             background: '#355f64',
         }

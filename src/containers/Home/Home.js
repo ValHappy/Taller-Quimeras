@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
         margin: 8,
         padding: 7,
         color: 'white',
-        background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
+        background: 'linear-gradient(45deg, #4d888f 40%, #59ef66 90%)',
         '&:hover': {
             background: '#355f64',
         }

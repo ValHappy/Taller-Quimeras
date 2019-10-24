@@ -35,11 +35,11 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
     },
     button: {
-        width: '8%',
+        width: '10%',
         margin: 5,
         padding: 5,
         color: 'white',
-        background: '#4d888f',
+        background: 'linear-gradient(45deg, #4d888f 40%, #59ef66 90%)',
         '&:hover': {
             background: '#355f64',
         }
