@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles, Card } from '@material-ui/core';
+import AppContext from '../../contexts/AppContext';
 
 function Selection(props) {
+
+    const context = useContext(AppContext);
+
     const classes = useStyles();
 
     return (
         <div className={classes.parts}>
-            <Card className={classes.card}> <img className={classes.img} src="./img/chimera/ears/ears_1.png" alt="" /> </Card>
-            <Card className={classes.card}> <img className={classes.img} src="./img/chimera/ears/ears_2.png" alt="" /> </Card>
-            <Card className={classes.card}> <img className={classes.img} src="./img/chimera/ears/ears_3.png" alt="" /> </Card>
-            <Card className={classes.card}> <img className={classes.img} src="./img/chimera/ears/ears_4.png" alt="" /> </Card>
-            <Card className={classes.card}> <img className={classes.img} src="./img/chimera/ears/ears_5.png" alt="" /> </Card>
+            {context.bodyPart === 'heads' &&
+                context.heads.map((element, index) =>
+                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                )
+            }
+            {context.bodyPart === 'ears' &&
+                context.ears.map((element, index) =>
+                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                )
+            }
+            {context.bodyPart === 'tails' &&
+                context.tails.map((element, index) =>
+                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                )
+            }
         </div>
     );
 }

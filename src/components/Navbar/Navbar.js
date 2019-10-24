@@ -13,11 +13,7 @@ function Navbar(props) {
 
     return (
         <section className={classes.container}>
-            <div className={classes.logo}>
-                <img src="url('https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg')" alt="aiuda" />
-            </div>
-
-            <Tabs className={classes.navbar} value={props.location.pathname} onChange={handleChange} indicatorColor="secondary" textColor="primary" licentered>
+            <Tabs className={classes.navbar} value={props.location.pathname} onChange={handleChange} indicatorColor="secondary">
                 <Tab label="Home" value="/" />
                 <Tab label="Create a Chimera" value="/create" />
                 <Tab label="My Chimeras" value="/garage" />
@@ -28,7 +24,7 @@ function Navbar(props) {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        flexGrow: 1,
+        flexGrow: 2,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -36,12 +32,8 @@ const useStyles = makeStyles(theme => ({
     },
     navbar: {
         fontWeight: 'bolder',
-        color: 'white'
+        color: '#355f64'
     },
-    logo: {
-        padding: 0.5,
-        marginRight: '60%',
-    }
 }));
 
 export default withRouter(Navbar);

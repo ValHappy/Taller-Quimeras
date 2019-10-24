@@ -1,18 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { makeStyles, Button } from '@material-ui/core';
+import AppContext from '../../contexts/AppContext';
 
 function Categories(props) {
     const classes = useStyles();
 
-    function handleClick() {
-        console.log("Nombre de la categoria para poner en url");
+    const context = useContext(AppContext);
+
+    function handleClick(body) {
+        context.setBodyPart(body);
     }
 
     return (
         <div className={classes.buttons}>
-            <Button onClick={handleClick} variant="contained" className={classes.button}> heads </Button>
-            <Button onClick={handleClick} variant="contained" className={classes.button}> ears </Button>
-            <Button onClick={handleClick} variant="contained" className={classes.button}> tails </Button>
+            <Button onClick={() => {handleClick('heads')}} variant="contained" className={classes.button}> heads </Button>
+            <Button onClick={() => {handleClick('ears')}} variant="contained" className={classes.button}> ears </Button>
+            <Button onClick={() => {handleClick('tails')}} variant="contained" className={classes.button}> tails </Button>
         </div>
     );
 }
