@@ -13,7 +13,7 @@ function Garage() {
             <div className={classes.content}>
                 {context.chimeras.map((chimera) =>
                     <section className={classes.element}>
-                        <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body}/>
+                        <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body} tail={chimera.tail}/>
                         <p className={classes.info}>{chimera.name}</p>
                     </section>
                 )}
