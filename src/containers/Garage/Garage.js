@@ -10,16 +10,13 @@ function Garage() {
 
     return (
         <div className={classes.container}>
-            <h1 className={classes.title}>Your chimeras</h1>
-
             <div className={classes.content}>
                 {context.chimeras.map((chimera) =>
                     <section className={classes.element}>
-                        <div className={classes.img}>
-                            <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body} tail={chimera.tail} />
-                        </div>
+                        <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body}/>
                         <p className={classes.info}>{chimera.name}</p>
-                    </section>)}
+                    </section>
+                )}
             </div>
         </div>
     );
@@ -28,35 +25,20 @@ function Garage() {
 const useStyles = makeStyles(theme => ({
     container: {
         width: '100%',
-        // height: 600,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     content: {
-        width: '50%',
+        maxWidth: '100%',
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        alignContent: 'center',
-        flexWrap: 'wrap',
     },
     element: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 15
-    },
-    title: {
-        color: 'white',
-        fontSize: 50,
-    },
-    img: {
-        width: 200,
-        height: 300,
+        width: 400,
+        height: '100%',
+        margin: 20,
+        padding: 15,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -64,21 +46,17 @@ const useStyles = makeStyles(theme => ({
         background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
         transition: 'all .3s ease-in-out',
         borderRadius: 20,
-
         "&:hover": {
             cursor: 'pointer',
+
         }
-    },
-    quimera: {
-        width: 200,
-        height: 200,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
     },
     info: {
         fontWeight: 'bolder',
-        color: '#4d888f',
+        color: 'white',
+        margin: 0,
+        padding: 0,
+        fontSize: 25,
     }
 }));
 

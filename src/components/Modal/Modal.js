@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core';
-import Name from '../../Name/Name';
-import AppContext from '../../../contexts/AppContext';
+import Name from '../Name/Name';
+import AppContext from '../../contexts/AppContext';
+import { fade } from '@material-ui/core/styles';
 
 const Modal = (props) => {
     const classes = useStyles();
@@ -24,12 +25,15 @@ const Modal = (props) => {
 const useStyles = makeStyles(theme => ({
     modal: {
         width: '100%',
-        height: '90%',
+        height: '110%',
+        margin: 0,
+        padding: 0,
         position: 'absolute',
         zIndex: 50,
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: fade(theme.palette.common.black, 0.4),
     },
     body: {
         padding: '1% 3%',

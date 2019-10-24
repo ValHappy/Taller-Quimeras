@@ -33,10 +33,10 @@ const useStyles = makeStyles(theme => ({
         width: '8%',
         margin: 5,
         padding: 5,
-        color: '#4d888f',
-        background: '#acf999',
+        color: '#4d877e',
+        background: 'linear-gradient(45deg, #85dd89 30%, #a7edac 90%)',
         '&:hover': {
-            background: '#78ae6b',
+            background: '#6dc082',
         }
     },
 }));

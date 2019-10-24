@@ -14,6 +14,19 @@ function Name(props) {
         if (!context.name.length) {
             alert("Give a name for your pet >:c");
         } else {
+            let chimeras = [...context.chimeras];
+            chimeras.push(
+                {
+                    name: context.name,
+                    head: context.selectedHead,
+                    ear: context.selectedEar,
+                    body: context.selectedBody,
+                    tail: context.selectedTail
+                }
+            );
+            context.setChimeras(chimeras);
+            context.reset();
+            context.setShowModal(false);
             props.history.push('/garage');
         }
     }
@@ -31,8 +44,10 @@ function Name(props) {
                 <InputBase placeholder="Name..." classes={{ root: classes.inputRoot, input: classes.inputInput, }} onChange={handleInput} value={context.name} />
             </div>
 
-            <Button onClick={handleClick} variant="contained" className={classes.button}> done </Button>
-            <Button onClick={() => context.setShowModal(false)} variant="contained" className={classes.button}> cancel </Button>
+            <div className={classes.buttons}>
+                <Button onClick={handleClick} variant="contained" className={classes.button}> done </Button>
+                <Button onClick={() => context.setShowModal(false)} variant="contained" className={classes.buttonC}> cancel </Button>
+            </div>
         </div>
     );
 }
@@ -86,6 +101,10 @@ const useStyles = makeStyles(theme => ({
             },
         },
     },
+    buttons: {
+        display: 'flex',
+        margin: 10
+    },
     button: {
         width: '10%',
         margin: 5,
@@ -94,6 +113,16 @@ const useStyles = makeStyles(theme => ({
         background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
         '&:hover': {
             background: '#355f64',
+        }
+    },
+    buttonC: {
+        width: '10%',
+        margin: 5,
+        padding: 5,
+        color: 'white',
+        background: '#546e7a',
+        '&:hover': {
+            background: '#37474f',
         }
     },
 }));

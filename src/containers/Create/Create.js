@@ -3,8 +3,8 @@ import { makeStyles, Button } from '@material-ui/core';
 import Chimera from '../../components/Chimera/Chimera';
 import Categories from '../../components/Categories/Categories';
 import Selection from '../../components/Selection/Selection';
-import Modal from '../../components/Categories/Modal/Modal';
 import AppContext from '../../contexts/AppContext';
+import Modal from '../../components/Modal/Modal';
 
 
 function Create() {

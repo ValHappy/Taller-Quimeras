@@ -50,20 +50,20 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
     },
     img: {
-        width: '100%',
+        height: '90%',
     },
     card: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 80,
+        width: 130,
         height: 60,
         margin: 5,
         padding: 1,
         color: 'white',
-        background: '#355f64',
+        background: 'linear-gradient(45deg, #00a08f 30%, #1b8e7d 90%)',
         '&:hover': {
-            width: 100,
+            width: 150,
             height: 80,
         }
     },

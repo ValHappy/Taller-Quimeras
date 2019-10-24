@@ -10,9 +10,14 @@ function Home(props) {
 
     return (
         <div className={classes.container}>
-            <h1 className={classes.title}>Magical Chimeras Maker</h1>
-            <p className={classes.desc}>You can create a great creature now, you will choose its head, the type of ears or tail that it will have, you will have a sweet and adorable pet for life.</p>
-            <Button onClick={handleClick} variant="contained" className={classes.button}> Start now</Button>
+            <div>
+                <h1 className={classes.title}>Magical Chimeras Maker</h1>
+                <p className={classes.desc}>You can create a great creature now, you will choose its head, the type of ears or tail that it will have, you will have a sweet and adorable pet for life.</p>
+                <Button onClick={handleClick} variant="contained" className={classes.button}> Start now</Button>
+            </div>
+            <div>
+                <img src="../../../assets/img/rec.png" alt="aqui esta"/>
+            </div>
         </div>
     );
 }
