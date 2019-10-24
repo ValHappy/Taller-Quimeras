@@ -1,19 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import AppContext from '../../contexts/AppContext';
-
 
 function Chimera(props) {
     const classes = useStyles();
-
-    const context = useContext(AppContext);
     
     return (
         <div className={classes.create}>
-            <img className={classes.ears} src={context.selectedEar} alt="ears" />
-            <img className={classes.head} src={context.selectedHead} alt="ears" />
-            <img className={classes.body} src={context.selectedBody} alt="ears" />
-            <img className={classes.tail} src={context.selectedTail} alt="ears" />
+            <img className={classes.ears} src={props.ear} alt="ears" />
+            <img className={classes.head} src={props.head} alt="ears" />
+            <img className={classes.body} src={props.body} alt="ears" />
+            <img className={classes.tail} src={props.tail} alt="ears" />
         </div>
     );
 }

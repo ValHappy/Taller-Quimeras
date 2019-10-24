@@ -1,45 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core';
+import AppContext from '../../contexts/AppContext';
+import Chimera from '../../components/Chimera/Chimera';
 
 function Garage() {
     const classes = useStyles();
+
+    const context = useContext(AppContext);
 
     return (
         <div className={classes.container}>
             <h1 className={classes.title}>Your chimeras</h1>
 
             <div className={classes.content}>
-                {/* uno */}
-                <section className={classes.element}>
-                    <div className={classes.img}>
-                        <img className={classes.quimera} src="https://images.vexels.com/media/users/3/159515/isolated/preview/0e10d84e6c002f8a468d0dd6c9c6081b-ilustraci--n-de-oreja-de-conejo-conejo-bozal-by-vexels.png" alt="Your chimera" />
-                    </div>
-                    <p className={classes.info}>Asigned name :3</p>
-                </section>
-
-                {/* dos */}
-                <section className={classes.element}>
-                    <div className={classes.img}>
-                        <img className={classes.quimera} src="https://images.vexels.com/media/users/3/159515/isolated/preview/0e10d84e6c002f8a468d0dd6c9c6081b-ilustraci--n-de-oreja-de-conejo-conejo-bozal-by-vexels.png" alt="Your chimera" />
-                    </div>
-                    <p className={classes.info}>Asigned name :3</p>
-                </section>
-
-                {/* tres */}
-                <section className={classes.element}>
-                    <div className={classes.img}>
-                        <img className={classes.quimera} src="https://images.vexels.com/media/users/3/159515/isolated/preview/0e10d84e6c002f8a468d0dd6c9c6081b-ilustraci--n-de-oreja-de-conejo-conejo-bozal-by-vexels.png" alt="Your chimera" />
-                    </div>
-                    <p className={classes.info}>Asigned name :3</p>
-                </section>
-
-                {/* cuatro */}
-                <section className={classes.element}>
-                    <div className={classes.img}>
-                        <img className={classes.quimera} src="https://images.vexels.com/media/users/3/159515/isolated/preview/0e10d84e6c002f8a468d0dd6c9c6081b-ilustraci--n-de-oreja-de-conejo-conejo-bozal-by-vexels.png" alt="Your chimera" />
-                    </div>
-                    <p className={classes.info}>assigned name :3</p>
-                </section>
+                {context.chimeras.map((chimera) =>
+                    <section className={classes.element}>
+                        <div className={classes.img}>
+                            <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body} tail={chimera.tail} />
+                        </div>
+                        <p className={classes.info}>{chimera.name}</p>
+                    </section>)}
             </div>
         </div>
     );

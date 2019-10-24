@@ -1,43 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles, Button } from '@material-ui/core';
 import Chimera from '../../components/Chimera/Chimera';
 import Categories from '../../components/Categories/Categories';
 import Selection from '../../components/Selection/Selection';
+import Modal from '../../components/Categories/Modal/Modal';
+import AppContext from '../../contexts/AppContext';
 
 
 function Create() {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+
+    const context = useContext(AppContext);
 
     const handleOpen = () => {
-        setOpen(true);
+        context.setShowModal(true);
     };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-    
 
     return (
         <div className={classes.container}>
-            <Chimera />
+            <Chimera head={context.selectedHead} ear={context.selectedEar} body={context.selectedBody} tail={context.selectedTail} />
             <Categories />
             <Selection />
             <Button onClick={handleOpen} variant="contained" className={classes.button}> done </Button>
-{/* 
-            <Modal
-                aria-labelledby="spring-modal-title"
-                aria-describedby="spring-modal-description"
-                className={classes.modal}
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-            >
-            </Modal> */}
+            <Modal />
         </div>
     );
 }

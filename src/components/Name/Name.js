@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles, InputBase, Button } from '@material-ui/core';
 import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 import { fade } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom';
+import AppContext from '../../contexts/AppContext';
 
-function Name() {
+function Name(props) {
     const classes = useStyles();
 
-    const handleClick = (event) =>{
-        console.log("value del input");
+    const context = useContext(AppContext);
+
+    const handleClick = (event) => {
+        if (!context.name.length) {
+            alert("Give a name for your pet >:c");
+        } else {
+            props.history.push('/garage');
+        }
     }
 
     const handleInput = (event) => {
-        let name = event.target.value;
-        console.log(name);
+        context.setName(event.target.value);
     }
 
     return (
@@ -22,10 +28,11 @@ function Name() {
 
             <div className={classes.input} onKeyPress={handleInput}>
                 <div className={classes.icon}><CreateRoundedIcon /></div>
-                <InputBase placeholder="Name..." classes={{ root: classes.inputRoot, input: classes.inputInput, }} />
+                <InputBase placeholder="Name..." classes={{ root: classes.inputRoot, input: classes.inputInput, }} onChange={handleInput} value={context.name} />
             </div>
 
             <Button onClick={handleClick} variant="contained" className={classes.button}> done </Button>
+            <Button onClick={() => context.setShowModal(false)} variant="contained" className={classes.button}> cancel </Button>
         </div>
     );
 }
@@ -39,7 +46,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center'
     },
     title: {
-        color: "white"
+        color: "#4d888f"
     },
     input: {
         position: 'relative',
@@ -68,7 +75,7 @@ const useStyles = makeStyles(theme => ({
         color: 'inherit',
     },
     inputInput: {
-        color: "white",
+        color: "#4d888f",
         padding: theme.spacing(1, 1, 1, 7),
         transition: theme.transitions.create('width'),
         width: '100%',

@@ -35,6 +35,8 @@ function App() {
   const [selectedHead, setSelectedHead] = useState(Head1);
   const [selectedBody, setSelectedBody] = useState(Body1);
   const [selectedTail, setSelectedTail] = useState(Tail1);
+  const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState('');
 
   const context = {
     bodyPart,
@@ -51,6 +53,19 @@ function App() {
     selectedTail,
     setSelectedTail,
     tails: [Tail1, Tail2, Tail3, Tail4, Tail5],
+    showModal,
+    setShowModal,
+    name,
+    setName,
+    chimeras: [
+      {
+        name: 'happy',
+        ear: Ear1,
+        head: Head1,
+        body: Body1,
+        tail: Tail1
+      }
+    ]
   };
 
   return (
