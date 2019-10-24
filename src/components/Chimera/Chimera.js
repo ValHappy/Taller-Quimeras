@@ -9,7 +9,7 @@ function Chimera(props) {
             <img className={classes.ears} src={props.ear} alt="ears" />
             <img className={classes.head} src={props.head} alt="head" />
             <img className={classes.body} src={props.body} alt="body" />
-            <img className={classes.tail} src={props.tail} alt="tail" />
+            <img className={classes.tail} src={props.tail} alt="" />
         </div>
     );
 }
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     tail: {
         position: 'absolute',
         top: '29%',
-        left: '35%',
+        left: 550,
         zIndex: 2,
     }
 }));

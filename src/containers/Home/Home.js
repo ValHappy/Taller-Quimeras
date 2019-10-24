@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
         marginTop: 100,
         padding: 15,
-        color: theme.palette.primary.main,
+        color: '#355f64',
         fontSize: 40,
         fontWeight: 'bolder',
     },
@@ -64,6 +64,9 @@ const useStyles = makeStyles(theme => ({
         padding: 7,
         color: 'white',
         background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
+        '&:hover': {
+            background: '#355f64',
+        }
     },
     img: {
         width: '75%',
