@@ -17,7 +17,7 @@ function Home(props) {
                 <Button onClick={handleClick} variant="contained" className={classes.button}> Start now</Button>
             </div>
             <div className={classes.contentImg}>
-                <img className={classes.img} src={chimera} alt="chime"/>
+                <img className={classes.img} src={chimera} alt="chime" />
             </div>
         </div>
     );
@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
         padding: 15,
         color: theme.palette.primary.main,
         fontSize: 40,
-        fontWeight: 'bolder'
+        fontWeight: 'bolder',
     },
     desc: {
         margin: 0,
@@ -56,20 +56,19 @@ const useStyles = makeStyles(theme => ({
         padding: 15,
         color: theme.palette.primary.contrastText,
         fontSize: 20,
-        textAlign: 'justify'
+        textAlign: 'justify',
     },
     button: {
         width: '20%',
         margin: 8,
         padding: 7,
         color: 'white',
-        background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)'
+        background: 'linear-gradient(45deg, #4d888f 30%, #acf999 90%)',
     },
     img: {
-        width: '75%' ,
+        width: '75%',
         margin: 0,
-        padding: 15
-        
+        padding: 15,
     }
 }));
 

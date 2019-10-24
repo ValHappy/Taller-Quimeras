@@ -4,7 +4,6 @@ import AppContext from '../../contexts/AppContext';
 
 function Categories(props) {
     const classes = useStyles();
-
     const context = useContext(AppContext);
 
     const handleClick = (body) => {

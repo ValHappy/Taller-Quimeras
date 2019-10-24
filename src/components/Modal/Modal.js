@@ -7,11 +7,10 @@ import { fade } from '@material-ui/core/styles';
 const Modal = (props) => {
     const classes = useStyles();
     const context = useContext(AppContext);
-    
+
     return (
         <>
-            {
-                context.showModal &&
+            {context.showModal &&
                 <div className={classes.modal}>
                     <div className={classes.body}>
                         <Name></Name>

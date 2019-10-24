@@ -3,22 +3,12 @@ import { makeStyles, Card } from '@material-ui/core';
 import AppContext from '../../contexts/AppContext';
 
 function Selection(props) {
-
     const context = useContext(AppContext);
-
     const classes = useStyles();
 
-    const setHead = (head) => {
-        context.setSelectedHead(head);
-    };
-
-    const setEar = (ear) => {
-        context.setSelectedEar(ear);
-    };
-
-    const setTail = (tail) => {
-        context.setSelectedTail(tail);
-    };
+    const setHead = (head) => { context.setSelectedHead(head); };
+    const setEar = (ear) => { context.setSelectedEar(ear); };
+    const setTail = (tail) => { context.setSelectedTail(tail); };
 
     return (
         <div className={classes.parts}>

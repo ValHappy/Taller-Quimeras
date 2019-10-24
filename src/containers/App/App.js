@@ -30,14 +30,14 @@ import Body1 from '../../assets/img/chimera/body.png';
 
 function App() {
 
+  const [name, setName] = useState('');
+  const [chimeras, setChimeras] = useState([]);
   const [bodyPart, setBodyPart] = useState('heads');
   const [selectedEar, setSelectedEar] = useState(Ear1);
   const [selectedHead, setSelectedHead] = useState(Head1);
   const [selectedBody, setSelectedBody] = useState(Body1);
   const [selectedTail, setSelectedTail] = useState(Tail1);
   const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState('');
-  const [chimeras, setChimeras] = useState([]);
 
   const reset = () => {
     setName('');

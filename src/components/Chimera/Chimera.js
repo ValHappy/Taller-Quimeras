@@ -26,24 +26,23 @@ const useStyles = makeStyles(theme => ({
     ears: {
         position: 'absolute',
         top: '8%',
-        zIndex: 1,
+        zIndex: 2,
     },
     head: {
         position: 'absolute',
         top: '23%',
-        zIndex: 3
+        zIndex: 4,
     },
     body: {
         position: 'absolute',
         top: '29%',
-        zIndex: 2,
-
+        zIndex: 3,
     },
     tail: {
         position: 'absolute',
         top: '29%',
         left: '35%',
-        zIndex: 1,
+        zIndex: 2,
     }
 }));
 

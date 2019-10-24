@@ -6,10 +6,8 @@ import Selection from '../../components/Selection/Selection';
 import AppContext from '../../contexts/AppContext';
 import Modal from '../../components/Modal/Modal';
 
-
 function Create() {
     const classes = useStyles();
-
     const context = useContext(AppContext);
 
     const handleOpen = () => {

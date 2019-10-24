@@ -7,7 +7,6 @@ import AppContext from '../../contexts/AppContext';
 
 function Name(props) {
     const classes = useStyles();
-
     const context = useContext(AppContext);
 
     const handleClick = (event) => {
@@ -38,12 +37,10 @@ function Name(props) {
     return (
         <div className={classes.container}>
             <h1 className={classes.title}>Give your pet a name</h1>
-
             <div className={classes.input} onKeyPress={handleInput}>
                 <div className={classes.icon}><CreateRoundedIcon /></div>
                 <InputBase placeholder="Name..." classes={{ root: classes.inputRoot, input: classes.inputInput, }} onChange={handleInput} value={context.name} />
             </div>
-
             <div className={classes.buttons}>
                 <Button onClick={handleClick} variant="contained" className={classes.button}> done </Button>
                 <Button onClick={() => context.setShowModal(false)} variant="contained" className={classes.buttonC}> cancel </Button>

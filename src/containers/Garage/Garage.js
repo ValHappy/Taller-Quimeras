@@ -5,7 +5,6 @@ import Chimera from '../../components/Chimera/Chimera';
 
 function Garage() {
     const classes = useStyles();
-
     const context = useContext(AppContext);
 
     return (
@@ -13,7 +12,7 @@ function Garage() {
             <div className={classes.content}>
                 {context.chimeras.map((chimera) =>
                     <section className={classes.element}>
-                        <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body} tail={chimera.tail}/>
+                        <Chimera head={chimera.head} ear={chimera.ear} body={chimera.body} tail={chimera.tail} />
                         <p className={classes.info}>{chimera.name}</p>
                     </section>
                 )}
@@ -48,7 +47,6 @@ const useStyles = makeStyles(theme => ({
         borderRadius: 20,
         "&:hover": {
             cursor: 'pointer',
-
         }
     },
     info: {
