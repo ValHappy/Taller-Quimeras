@@ -4,8 +4,10 @@ import Navbar from '../../components/Navbar/Navbar';
 import Home from '../Home/Home';
 import Create from '../Create/Create';
 import Garage from '../Garage/Garage';
+
 import AppContext from '../../contexts/AppContext';
 
+// Importar imagenes
 import Ear1 from '../../assets/img/chimera/ears/ears_1.png';
 import Ear2 from '../../assets/img/chimera/ears/ears_2.png';
 import Ear3 from '../../assets/img/chimera/ears/ears_3.png';
@@ -49,8 +51,6 @@ function App() {
     selectedTail,
     setSelectedTail,
     tails: [Tail1, Tail2, Tail3, Tail4, Tail5],
-
-
   };
 
   return (

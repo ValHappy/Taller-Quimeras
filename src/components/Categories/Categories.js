@@ -7,7 +7,7 @@ function Categories(props) {
 
     const context = useContext(AppContext);
 
-    function handleClick(body) {
+    const handleClick = (body) => {
         context.setBodyPart(body);
     }
 

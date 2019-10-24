@@ -8,21 +8,33 @@ function Selection(props) {
 
     const classes = useStyles();
 
+    const setHead = (head) => {
+        context.setSelectedHead(head);
+    };
+
+    const setEar = (ear) => {
+        context.setSelectedEar(ear);
+    };
+
+    const setTail = (tail) => {
+        context.setSelectedTail(tail);
+    };
+
     return (
         <div className={classes.parts}>
             {context.bodyPart === 'heads' &&
-                context.heads.map((element, index) =>
-                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                context.heads.map((head, index) =>
+                    <Card key={index} className={classes.card} onClick={() => setHead(head)}> <img className={classes.img} src={head} alt="" /> </Card>
                 )
             }
             {context.bodyPart === 'ears' &&
-                context.ears.map((element, index) =>
-                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                context.ears.map((ear, index) =>
+                    <Card key={index} className={classes.card} onClick={() => setEar(ear)}> <img className={classes.img} src={ear} alt="" /> </Card>
                 )
             }
             {context.bodyPart === 'tails' &&
-                context.tails.map((element, index) =>
-                    <Card key={index} className={classes.card}> <img className={classes.img} src={element} alt="" /> </Card>
+                context.tails.map((tail, index) =>
+                    <Card key={index} className={classes.card} onClick={() => setTail(tail)}> <img className={classes.img} src={tail} alt="" /> </Card>
                 )
             }
         </div>
