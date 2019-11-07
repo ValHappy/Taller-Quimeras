@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Taller-Quimeras/static/css/main.4df5a8a6.chunk.css",
+    "main.js": "/Taller-Quimeras/static/js/main.daac2fbe.chunk.js",
+    "main.js.map": "/Taller-Quimeras/static/js/main.daac2fbe.chunk.js.map",
+    "runtime-main.js": "/Taller-Quimeras/static/js/runtime-main.85e94e26.js",
+    "runtime-main.js.map": "/Taller-Quimeras/static/js/runtime-main.85e94e26.js.map",
+    "static/js/2.d338da18.chunk.js": "/Taller-Quimeras/static/js/2.d338da18.chunk.js",
+    "static/js/2.d338da18.chunk.js.map": "/Taller-Quimeras/static/js/2.d338da18.chunk.js.map",
+    "index.html": "/Taller-Quimeras/index.html",
+    "precache-manifest.32b5b09a2986a4de0e32c5a16971b817.js": "/Taller-Quimeras/precache-manifest.32b5b09a2986a4de0e32c5a16971b817.js",
+    "service-worker.js": "/Taller-Quimeras/service-worker.js",
+    "static/css/main.4df5a8a6.chunk.css.map": "/Taller-Quimeras/static/css/main.4df5a8a6.chunk.css.map",
+    "static/media/alone.png": "/Taller-Quimeras/static/media/alone.9d42fe02.png",
+    "static/media/index.css": "/Taller-Quimeras/static/media/background.e5679616.png",
+    "static/media/ears_1.png": "/Taller-Quimeras/static/media/ears_1.cbb61edd.png",
+    "static/media/ears_2.png": "/Taller-Quimeras/static/media/ears_2.751c48b1.png",
+    "static/media/ears_3.png": "/Taller-Quimeras/static/media/ears_3.22cf22f2.png",
+    "static/media/ears_5.png": "/Taller-Quimeras/static/media/ears_5.80ea1d11.png",
+    "static/media/tail_1.png": "/Taller-Quimeras/static/media/tail_1.3d9cdac4.png",
+    "static/media/tail_3.png": "/Taller-Quimeras/static/media/tail_3.37c60e2d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85e94e26.js",
+    "static/js/2.d338da18.chunk.js",
+    "static/css/main.4df5a8a6.chunk.css",
+    "static/js/main.daac2fbe.chunk.js"
+  ]
+}
